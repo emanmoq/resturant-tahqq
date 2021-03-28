@@ -581,6 +581,7 @@ header{
 }
 .burg1{
     width:90px;
+    left:0;
 }
 .burg2{
     bottom: -40px;
@@ -690,8 +691,6 @@ overflow: hidden;
         .navbar-toggler{
             display: block;
          } 
-
-
 header{
     padding-top:20;
 }
@@ -720,9 +719,6 @@ header{
 .navbar-expand-lg .navbar-nav .nav-item {
     padding: 10px;
 }
-
-
-
     .contactForm .form-group{
         width:47.6%;
     }
@@ -751,6 +747,7 @@ header{
         }
         .burg1 {
             width:109;
+            left:0;
         }
         .burg2 {
             width: 220px;
@@ -762,12 +759,35 @@ header{
             margin-top:70px;
         }
     }
-@media(min-width:1024) and (max-width:1200px){
+@media (min-width:1024px) and (max-width:1200px){
+    body{
+        font-size:13px;
+        overflow-x: hidden;
+    }
     .owl-carousel .owl-stage-outer{
         overflow: hidden;
         }
         .contactForm .form-group{
             width:48.4%;
+        }
+        .navbar-brand.logo{
+            margin-left:10px;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link{
+            padding:10px;
+        }
+        section{
+            padding: 50px 0 !important;
+
+        }
+        section.hero{
+            padding-top:120px !important;
+        }
+        .marginFormGroup{
+            margin-left:12px;
+        }
+        footer{
+            padding:50px 0;
         }
     
 }
