@@ -160,6 +160,7 @@ z-index: -1;
     border-bottom:1px dashed var(--font-color);
 padding-right :20px;
 font-size:1.5em;
+display: block;
 }
 .heroText h5{
     font-size :8.3em;
@@ -287,7 +288,7 @@ margin-bottom:25px;
     max-width:300px;
     overflow: hidden;
     margin:auto;
-    margin-bottom:40px;
+    margin-bottom:20px;
     height:175px;
 }
 .menuItem h4{
@@ -329,13 +330,13 @@ margin-bottom:25px;
     font-size: 1.2222222222222223em;
     border:1px solid #BEBEBE;
     color:#3D3D3D;
-    opacity:.7;    
 }
 .contactForm .form-control::placeholder{
     font-size: 1.2222222222222223em;
     color:#3D3D3D;
-    opacity:.7;    
+    
 }
+
 .gform_body{
     display: inline-block;
 }
@@ -468,15 +469,41 @@ font-size:16px;
     height:90px;
     padding-top:20px;
 }
-
+header .close{
+    display: none;
+    float: left;
+    margin: 10px;
+}
+.overlay{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 99;
+    display: none;
+}
 @media(min-width:300px) and (max-width:767px){
     section{
         padding-top:50px !important;
         padding-bottom:50px !important;
         margin:0 !important
     }
-    .navbar-expand-lg .navbar-nav{
-        width:100%;
+    .hero{
+        padding-top: 130px !important;
+    }
+    .navbar-collapse{
+        position: absolute;
+        width:70%;
+        background-color: white;
+        right: -15px;
+        top: -20px;
+        height:100vh;
+    }
+    .navbar-nav {
+        padding-top:30px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-item .nav-link,.navbar-expand-lg .navbar-nav .nav-item.active .nav-link{
+        color:var(--maincolor)
     }
     body{
         font-size:12px
@@ -488,9 +515,7 @@ font-size:16px;
     margin-left:0;
     color:var(--main-color)
 }
-    .hero{
-        padding:20px 0;
-    }
+
 header{
     padding-top:0;
     height: auto;
@@ -504,8 +529,6 @@ header{
     .navbar-expand-lg .navbar-nav .nav-link:before{
         display:none;
     }
-
-
     .socialIcons{
       float: none;
       width:100%;
@@ -521,11 +544,11 @@ header{
         cursor: pointer;
         border-radius: 0;
         opacity: .7;
-        border:1px solid var(--main-color);
+        border:1px solid var(--btn-color);
         text-align: center;
     }
     .mobileMenu i{
-        background-color: var(--main-color);
+        background-color: var(--btn-color);
         border-radius: 2px;
         content: '';
         display: block;
@@ -536,9 +559,7 @@ header{
     .mobileMenu i:last-child{
     margin-bottom: 0;;
     }
-.heroBG{
-    display: none;
-}
+
     .navbar{
         width:100%;
         margin-bottom:20px;
@@ -555,51 +576,57 @@ header{
 .btn{
     width: 100%;;
 }
-.advImg{
-    height: auto;
+.bottle{
+    display: none;
 }
-.advImg img{
-    height: auto;
-    width:100%;
+.burg1{
+    width:90px;
 }
-.navbar-collapse{
-    background-color: white;
-    width:100%;
-    ;
+.burg2{
+    bottom: -40px;
+    right: -14%;
+    width:180px;
 }
-.heroItem{
-    margin-top:20px;
+section.reserv{
+    padding-bottom:150px !important
 }
 .contactHeader{
     float: none;
 }
-.serviceBox{
-    margin-bottom: 20px;;
+.marginFormGroup{
+    margin-left:0;
 }
-.advIcon {
-    width: 50px;
-    height: 60px;}
+.newestCarousel{
+    padding:20px 20px 50px;
+}
+.newestCarousel .owl-dots {
+    width: 100%;
+    bottom: 6px;
+    right:0;
+    text-align: center;
+}
+.bigMealImg,.smallMealImg{
+    height: auto;
+}
+.gform_footer{
+    position: relative;
+    width:100%;
+    bottom:auto;
+    left:auto;
+}
     .contactForm .form-group{
         width:100%;
-
     }
-    .marginFormGroup{
-        margin: 0;;
-    }
-    .copyRights h3{
-        float: none;
-        margin-top:30px;
-    }
-.modal-dialog{
-    max-width: 100%;;
-}
-.modal .contactForm .form-group{
+.footerLogo{
     width:100%;
+}
+header .close{
+    display: block;;
 }
 }
 @media(min-width:768px) and (max-width:1023px){
     section{
-        padding-top:100px !important;
+        padding-top:50px !important;
         padding-bottom:50px !important;
         margin:0 !important
     }
@@ -609,54 +636,79 @@ header{
     body{
         font-size:13px
     }
+    section.hero{
+        padding-top:100px !important
+    }
     .navbar-brand.logo{
         margin-left:7px;
-        width:70px;
+        width:150px;
     }
-    .squre {
-        width: 81px;}
+
 .owl-carousel .owl-stage-outer{
 overflow: hidden;
 }
-footer{
-    padding:20px 0;
-}
-    .hero{
-        padding:20px 0;
+    button.navbar-toggler {
+        position: relative;
+        border: none;
+        height: 40px;
+        width:50px;
+        cursor: pointer;
+        border-radius: 0;
+        opacity: .7;
+        border:1px solid var(--btn-color);
+        text-align: center;
     }
-  
-    .navbar-expand-lg .navbar-collapse{
-        display: flex;
-        flex-basis: auto;
-         }
+    .mobileMenu i{
+        background-color: var(--btn-color);
+        border-radius: 2px;
+        content: '';
+        display: block;
+        width: 95%;
+        height: 3px;
+        margin-bottom:5px
+    }
+    .mobileMenu i:last-child{
+    margin-bottom: 0;;
+    }
+
+    .navbar-collapse{
+        position: absolute;
+        width:70%;
+        background-color: white;
+        right: -9%;
+        top: -20px;
+        height:100vh;
+        z-index: 999999999;
+    }
+    .navbar-nav {
+        padding-top:30px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-item .nav-link,.navbar-expand-lg .navbar-nav .nav-item.active .nav-link{
+        color:var(--maincolor)
+    }
+
         .navbar-toggler{
-        
-            display: none;
+            display: block;
          } 
-    .navbar{
-        width:100%;
-        margin-top:20px;
-    }
-         .navbar-nav {
-            display: -ms-flexbox;
-            display: flex;}
-            .navbar-expand-lg .navbar-nav {
-                -ms-flex-direction: row;
-                flex-direction: row;
-            }
-    
+
 
 header{
-    padding-top:0;
+    padding-top:20;
 }
 
 .scrollNav{
     padding:10px 0;
     height: 90px;
-    padding-top: 0;;
+    padding-top: 20px;
 }
-.aboutImg{
-    height: auto;;
+.smallMealImg{
+    height:102px;
+}
+.bigMealImg{
+    height:235px;
+}
+.itemImg{
+    height:110px;
 }
 
 .sectionTitle h4{
@@ -668,25 +720,9 @@ header{
 .navbar-expand-lg .navbar-nav .nav-item {
     padding: 10px;
 }
-.heroSection{
-    padding-top:0;
-}
-.advIcon {
-    width: 66px;
-    height: 72px;}
-    .advList li{
-        margin-bottom:15px;
-    }
-    .advImg{
-        height: auto;
-    }
-    .advImg img{
-        height: auto;
-        width: 100%;;
-    }
-    .advantegesText .sectionTitle {
-        margin-bottom: 10px;
-    }
+
+
+
     .contactForm .form-group{
         width:47.6%;
     }
@@ -696,9 +732,37 @@ header{
     .modal .contactForm .form-group.textareaFormGroup{
         width:100%;
     }
+    header .close{
+        display: block;
+    }
+    .contactHeader{
+        float:none;
+    }
+    .newestItem h4 {
+        font-size: 2.1em;
+        margin-bottom: 15px;
+    }
+    .newestCarousel .owl-dots {
+ 
+        right: 5%;
+        bottom: 3%;}
+        .marginFormGroup{
+            margin-left:10px;
         }
-
-@media(max-width:1200px){
+        .burg1 {
+            width:109;
+        }
+        .burg2 {
+            width: 220px;
+        }
+        footer{
+            padding:50px 0;
+        }
+        .copyRight{
+            margin-top:70px;
+        }
+    }
+@media(min-width:1024) and (max-width:1200px){
     .owl-carousel .owl-stage-outer{
         overflow: hidden;
         }

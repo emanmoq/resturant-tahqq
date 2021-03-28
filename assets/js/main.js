@@ -53,7 +53,18 @@ jQuery(function ($) {
     $(".collapse").removeClass("show");
   });
   //for date picker
-  $( "#datepicker" ).datepicker();
-
+  $( ".time" ).datepicker();
+  $(".navbar-toggler").click(function(){
+    $(".overlay").css("display","block")
+  });
+  $(".close").click(function(){
+    $(".overlay").css("display","none");
+    $(".collapse").removeClass('show');
+  })
+  $(".overlay").click(function(){
+    $(this).css("display","none");
+    $(".collapse").removeClass('show');
+  });
+  
 });
 
