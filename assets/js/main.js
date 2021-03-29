@@ -55,7 +55,7 @@ jQuery(function ($) {
   //for date picker
   $( ".time" ).datepicker();
   $(".navbar-toggler").click(function(){
-    $(".overlay").css("display","block")
+    $(".overlay").toggle()
   });
   $(".close").click(function(){
     $(".overlay").css("display","none");
